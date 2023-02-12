@@ -8,7 +8,7 @@ use GuzzleHttp\Client;
 class Discord 
 {
     /**
-     * @var GuzzleHttp\Client
+     * @var \GuzzleHttp\Client
      */
     protected $client;
 
