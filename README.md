@@ -78,7 +78,7 @@ The name of the sender of the message can be set using the `setUsername (string 
 use PhpChannels\DiscordWebhook\Discord;
 ...
 Discord::message('https://discord.com/api/webhooks/your-webhook-path')
-    ->setUsername('Murilo Perosa')
+    ->setUsername('Your Name')
     ->setContent('Hello World!')
     ->send();
 ```
