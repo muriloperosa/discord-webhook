@@ -123,7 +123,7 @@ Discord::message('https://discord.com/api/webhooks/your-webhook-path')
     ->send();
 ```
 [IMAGE]
-## Dealing with Embeds
+## Working with Embeds
 
 ### 1. Author
 Coming soon...
@@ -152,9 +152,8 @@ Coming soon...
 ### 9. Footer
 Coming soon...
 
-
-## Changelog
+## Authors
 Coming soon...
 
-## Authors
+## Changelog
 Coming soon...
