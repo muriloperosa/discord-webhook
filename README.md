@@ -35,7 +35,21 @@ To run code static analysis using PHP Stan:
 
 ## Usage
 
-Coming soon...
+The main goal of this package is to allow highly customizable messages to be sent to Discord channels in a simple and semantic way via Webhooks. The base payload used to build the code can be accessed at `documentation/payload.json`.
+
+### Basic Usage
+
+```php
+use PhpChannels\DiscordWebhook\Discord;
+...
+Discord::message()
+    ->setUsername('My Bot')
+    ->setContent('Hello World!')
+    ->send();
+``` 
+
+[IMAGE]
+
 ## Changelog
 Coming soon...
 
