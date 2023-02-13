@@ -42,7 +42,7 @@ The main goal of this package is to allow highly customizable messages to be sen
 ```php
 use PhpChannels\DiscordWebhook\Discord;
 ...
-Discord::message()
+Discord::message('https://discord.com/api/webhooks/your-webhook-path')
     ->setUsername('My Bot')
     ->setContent('Hello World!')
     ->send();
