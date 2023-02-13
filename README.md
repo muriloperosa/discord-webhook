@@ -33,7 +33,7 @@ To run code static analysis using PHP Stan:
 ./vendor/bin/phpstan analyse
 ```
 
-## Usage
+## General
 
 The main goal of this package is to allow highly customizable messages to be sent to Discord channels in a simple and semantic way via Webhooks. The base payload used to build the code can be accessed at [`./documentation/payload.json`](https://github.com/muriloperosa/discord-webhook/blob/main/documentation/payload.json).
 
@@ -49,6 +49,47 @@ Discord::message('https://discord.com/api/webhooks/your-webhook-path')
 ``` 
 
 ![image](https://user-images.githubusercontent.com/45050585/218355168-65a2e18b-5f04-4f8f-9f0b-858a4f1045c1.png)
+
+### 1. Define Webhook
+Coming soon...
+### 2. Username
+Coming soon...
+### 3. Avatar
+Coming soon...
+
+### 4. Content
+Coming soon...
+### 5. Embeds
+Coming soon...
+
+## Dealing with Embeds
+
+### 1. Author
+Coming soon...
+
+### 2. Title
+Coming soon...
+
+### 3. URL
+Coming soon...
+
+### 4. Description
+Coming soon...
+
+### 5. Color
+Coming soon...
+
+### 6. Fields
+Coming soon...
+
+### 7. Thumbnail
+Coming soon...
+
+### 8. Image
+Coming soon...
+
+### 9. Footer
+Coming soon...
 
 
 ## Changelog
