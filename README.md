@@ -94,7 +94,7 @@ use PhpChannels\DiscordWebhook\Discord;
 Discord::message('https://discord.com/api/webhooks/your-webhook-path')
     ->setUsername('My Bot')
     ->setContent('Hello World!')
-    ->setAvatar('https://github.blog/wp-content/uploads/2013/04/0cf7be70-a5e3-11e2-8943-6ac7a953f26d.jpg')
+    ->setAvatar('https://fake-avatar.com/avatar.png')
     ->send();
 ```
 
@@ -161,16 +161,69 @@ Discord::message('https://discord.com/api/webhooks/your-webhook-path')
 ```
 [IMAGE]
 ### 3. URL
-Coming soon...
+To handle the `embeds[0]['url']` property, the `setUrl (string $url)` method can be used, as in the examples below:
+
+```php
+use PhpChannels\DiscordWebhook\Discord;
+...
+Discord::message('https://discord.com/api/webhooks/your-webhook-path')
+    ->setUrl('https://fake-url.com')
+    ->send();
+```
+[IMAGE]
 
 ### 4. Description
-Coming soon...
+To handle the `embeds[0]['description']` property, the `setDescription (string $description)` method can be used, as in the examples below:
+
+```php
+use PhpChannels\DiscordWebhook\Discord;
+...
+Discord::message('https://discord.com/api/webhooks/your-webhook-path')
+    ->setDescription('Your description here!')
+    ->send();
+```
+[IMAGE]
 
 ### 5. Color
-Coming soon...
+To handle the `embeds[0]['color']` property, the `setColor (string $color)` method can be used, as in the examples below:
+
+```php
+use PhpChannels\DiscordWebhook\Discord;
+...
+Discord::message('https://discord.com/api/webhooks/your-webhook-path')
+    ->setColor('#57F287')
+    ->send();
+```
+[IMAGE]
 
 ### 6. Fields
-Coming soon...
+To add fields to `embeds[0]['fields']` property, the `setField (string $name, string $value, bool $inline = null)` method can be used, as in the examples below:
+
+```php
+use PhpChannels\DiscordWebhook\Discord;
+...
+Discord::message('https://discord.com/api/webhooks/your-webhook-path')
+    ->setField('Name', 'Value')
+    ->send();
+
+// optional param $inline
+Discord::message('https://discord.com/api/webhooks/your-webhook-path')
+    ->setField('Name', 'Value', true)
+    ->send();
+
+// multiple fields
+Discord::message('https://discord.com/api/webhooks/your-webhook-path')
+    ->setField('Name 1', 'Value 1')
+    ->setField('Name 2', 'Value 2', true)
+    ->send();
+```
+> Note: This method can be invoked several times, each time adding a new field to the array.
+
+<br/>
+
+[IMAGE]
+
+
 
 ### 7. Thumbnail
 Coming soon...
