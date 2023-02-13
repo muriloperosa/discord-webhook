@@ -101,7 +101,17 @@ Discord::message('https://discord.com/api/webhooks/your-webhook-path')
 [IMAGE]
 
 ### 4. Content
-Coming soon...
+A simple text content of the message can be set using the `setContent (string $content)` method, as in the example below:
+
+```php
+use PhpChannels\DiscordWebhook\Discord;
+...
+Discord::message('https://discord.com/api/webhooks/your-webhook-path')
+    ->setContent('A simple text message you want to send!')
+    ->send();
+```
+
+[IMAGE]
 ### 5. Embeds
 Coming soon...
 
