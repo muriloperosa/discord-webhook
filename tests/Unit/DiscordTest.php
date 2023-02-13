@@ -256,6 +256,6 @@ class DiscordTest extends TestCase
         Discord::message()->send();
 
         $this->expectException(Exception::class);
-        Discord::message('https::fake-webhook.test.com')->send();
+        Discord::message('https://fake-webhook.test.com')->send();
     }
 }
