@@ -226,16 +226,64 @@ Discord::message('https://discord.com/api/webhooks/your-webhook-path')
 
 
 ### 7. Thumbnail
-Coming soon...
+To add fields to `embeds[0]['thumbnail']` property, the `setThumbnail (string $thumbnail)` method can be used, as in the examples below:
+
+```php
+use PhpChannels\DiscordWebhook\Discord;
+...
+Discord::message('https://discord.com/api/webhooks/your-webhook-path')
+    ->setThumbnail('https://fake-thumb.com/thumb.png')
+    ->send();
+```
+[IMAGE]
 
 ### 8. Image
-Coming soon...
+To add fields to `embeds[0]['image']` property, the `setImage (string $image)` method can be used, as in the examples below:
+
+```php
+use PhpChannels\DiscordWebhook\Discord;
+...
+Discord::message('https://discord.com/api/webhooks/your-webhook-path')
+    ->setImage('https://fake-image.com/image.png')
+    ->send();
+```
+[IMAGE]
 
 ### 9. Footer
-Coming soon...
+To add fields to `embeds[0]['footer']` property, the `setFooter (string $text,  ?string $icon_url = '')` method can be used, as in the examples below:
 
-## Authors
-Coming soon...
+```php
+use PhpChannels\DiscordWebhook\Discord;
+...
+Discord::message('https://discord.com/api/webhooks/your-webhook-path')
+    ->setFooter('Text to footer here!')
+    ->send();
+
+// optional param $icon_url
+Discord::message('https://discord.com/api/webhooks/your-webhook-path')
+    ->setFooter('Text to footer here!', 'https://fake-icon.com/icon.png')
+    ->send();
+```
+[IMAGE]
+## Usage Example
+
+```php
+use PhpChannels\DiscordWebhook\Discord;
+...
+Discord::message('https://discord.com/api/webhooks/your-webhook-path')
+    ->setUsername('Application Bot')
+    ->setAvatarUrl('https://fake-avatar.com/avatar.png')
+    ->setContent('Content here!')
+    ->setColor('#57F287')
+    ->setTitle('Title here!')
+    ->setDescription('Description here!')
+    ->send();
+```
+> Note: The above example is for documentation purposes only, and that all the methods presented in this file can be combined to send the message as you need.
+
+<br/>
+
+[IMAGE]
 
 ## Changelog
 Coming soon...
