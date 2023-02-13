@@ -86,7 +86,19 @@ Discord::message('https://discord.com/api/webhooks/your-webhook-path')
 [IMAGE]
 
 ### 3. Avatar
-Coming soon...
+The avatar of the sender of the message can be set using the `setAvatar (string $avatar_url)` method, as in the example below:
+
+```php
+use PhpChannels\DiscordWebhook\Discord;
+...
+Discord::message('https://discord.com/api/webhooks/your-webhook-path')
+    ->setUsername('My Bot')
+    ->setContent('Hello World!')
+    ->setAvatar('https://github.blog/wp-content/uploads/2013/04/0cf7be70-a5e3-11e2-8943-6ac7a953f26d.jpg?resize=1234%2C631')
+    ->send();
+```
+
+[IMAGE]
 
 ### 4. Content
 Coming soon...
