@@ -51,7 +51,23 @@ Discord::message('https://discord.com/api/webhooks/your-webhook-path')
 ![image](https://user-images.githubusercontent.com/45050585/218355168-65a2e18b-5f04-4f8f-9f0b-858a4f1045c1.png)
 
 ### 1. Define Webhook
-Coming soon...
+There are two ways which the destination webhook of the message can be defined. The first is to pass the URL of the webhook as parameter to the `message (?string $webhook = null)` method, as in the example below:
+
+```php
+use PhpChannels\DiscordWebhook\Discord;
+...
+Discord::message('https://discord.com/api/webhooks/your-webhook-path');
+// ...
+```
+Or the webhook can be set via the `setWebhook (string $webhook)` method, as in the second example:
+```php
+use PhpChannels\DiscordWebhook\Discord;
+...
+Discord::message()
+    ->setWebhook('https://discord.com/api/webhooks/your-webhook-path');
+// ...
+```
+
 ### 2. Username
 Coming soon...
 ### 3. Avatar
