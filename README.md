@@ -286,4 +286,8 @@ Discord::message('https://discord.com/api/webhooks/your-webhook-path')
 [IMAGE]
 
 ## Changelog
-Coming soon...
+All notable changes to this project will be documented in this section.
+
+## [1.0.0] - 2023-02-13
+### Added
+- First release of the package! You can now perform composer installation of the package on PHP projects with version 7.3 and higher.
