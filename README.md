@@ -1,7 +1,7 @@
 # PHP Discord Webhook
 ![php workflow](https://github.com/muriloperosa/discord-webhook/actions/workflows/php.yml/badge.svg)
 
-<br/><br/>
+<br/>
 
 PHP package that contains a set of methods for simple, direct and elegant communication with Discord channels via Webhooks.
 
@@ -72,7 +72,19 @@ Discord::message()
 ```
 
 ### 2. Username
-Coming soon...
+The name of the sender of the message can be set using the `setUsername (string $username)` method, as in the example below:
+
+```php
+use PhpChannels\DiscordWebhook\Discord;
+...
+Discord::message('https://discord.com/api/webhooks/your-webhook-path')
+    ->setUsername('Murilo Perosa')
+    ->setContent('Hello World!')
+    ->send();
+```
+
+[IMAGE]
+
 ### 3. Avatar
 Coming soon...
 
