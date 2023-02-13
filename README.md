@@ -51,7 +51,7 @@ Discord::message('https://discord.com/api/webhooks/your-webhook-path')
     ->send();
 ``` 
 
-![image](https://user-images.githubusercontent.com/45050585/218355168-65a2e18b-5f04-4f8f-9f0b-858a4f1045c1.png)
+![image](https://user-images.githubusercontent.com/45050585/218358617-b0c2565b-2ca3-41ed-a25f-e3edae2de885.png)
 
 ### 1. Define Webhook
 There are two ways which the destination webhook of the message can be defined. The first is to pass the URL of the webhook as parameter to the `message (?string $webhook = null)` method, as in the example below:
