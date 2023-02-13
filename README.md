@@ -125,12 +125,41 @@ Discord::message('https://discord.com/api/webhooks/your-webhook-path')
 [IMAGE]
 ## Working with Embeds
 
+Working with embeds content through a single array that fully handles this property is very powerful and can certainly be very useful on many occasions. But it can get really confusing when we are working with a very large array of settings, making it difficult to read and maintain the code. To solve this problem methods for manipulating embeds were added to the package, which are described below.
 ### 1. Author
-Coming soon...
+
+To handle the `embeds[0]['author']` property, the `setAuthor (string $name, ?string $url = '', ?string $icon_url = '')` method can be used, as in the examples below:
+
+```php
+use PhpChannels\DiscordWebhook\Discord;
+...
+Discord::message('https://discord.com/api/webhooks/your-webhook-path')
+    ->setAuthor('Author Name')
+    ->send();
+
+// optional param $url
+Discord::message('https://discord.com/api/webhooks/your-webhook-path')
+    ->setAuthor('Author Name', 'https://fake-author.com')
+    ->send();
+
+// optional param $icon_url
+Discord::message('https://discord.com/api/webhooks/your-webhook-path')
+    ->setAuthor('Author Name', 'https://fake-author.com', 'https://fake-icon.com/icon.png')
+    ->send();
+```
+[IMAGE]
 
 ### 2. Title
-Coming soon...
+To handle the `embeds[0]['title']` property, the `setTitle (string $title)` method can be used, as in the examples below:
 
+```php
+use PhpChannels\DiscordWebhook\Discord;
+...
+Discord::message('https://discord.com/api/webhooks/your-webhook-path')
+    ->setTitle('Your title here!')
+    ->send();
+```
+[IMAGE]
 ### 3. URL
 Coming soon...
 
