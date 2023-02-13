@@ -1,4 +1,7 @@
 # PHP Discord Webhook
+![php workflow](https://github.com/muriloperosa/discord-webhook/actions/workflows/php.yml/badge.svg)
+
+<br/><br/>
 
 PHP package that contains a set of methods for simple, direct and elegant communication with Discord channels via Webhooks.
 
