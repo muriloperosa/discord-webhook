@@ -35,7 +35,7 @@ To run code static analysis using PHP Stan:
 
 ## Usage
 
-The main goal of this package is to allow highly customizable messages to be sent to Discord channels in a simple and semantic way via Webhooks. The base payload used to build the code can be accessed at `documentation/payload.json`.
+The main goal of this package is to allow highly customizable messages to be sent to Discord channels in a simple and semantic way via Webhooks. The base payload used to build the code can be accessed at [`./documentation/payload.json`](https://github.com/muriloperosa/discord-webhook/blob/main/documentation/payload.json).
 
 ### Basic Usage
 
@@ -48,7 +48,8 @@ Discord::message()
     ->send();
 ``` 
 
-[IMAGE]
+![image](https://user-images.githubusercontent.com/45050585/218355168-65a2e18b-5f04-4f8f-9f0b-858a4f1045c1.png)
+
 
 ## Changelog
 Coming soon...
