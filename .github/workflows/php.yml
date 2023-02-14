@@ -50,7 +50,7 @@ jobs:
         # Text at the top of the message
         title: "Success!"
         # Text to be displayed under the title
-        text: "Github Action!"
+        text: '{"content":"Test bot message from gitaction."}'
         # Extra info to be displayed under the message
         # fields: # optional
         # Additional buttons under the message
