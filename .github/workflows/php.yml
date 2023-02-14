@@ -40,4 +40,4 @@ jobs:
       
     - name: Notify discord
       run: |
-         curl -X POST -H 'Content-type: application/json' --data '{"username":"Github Action Bot","avatar_url":"https://avatars.githubusercontent.com/u/54465427?v=4","content":"Repository updated!","embeds":[{"footer":{"text":"[Discord Webhook](https://github.com/muriloperosa/discord-webhook)"}}]}' https://discord.com/api/webhooks/1073624482016661594/PVux-OlHfHgFwTS4XAkZS7OkRqCSLjAaYxKI0XPs4s3IHXtJ5Wubkn2bBulHU0ba9AB0
+         curl -X POST -H 'Content-type: application/json' --data '{"username":"Github Action Bot","avatar_url":"https://avatars.githubusercontent.com/u/54465427?v=4","content":"Repository updated!","embeds":[{"footer":{"text":"Discord Webhook - https://github.com/muriloperosa/discord-webhook"}}]}' https://discord.com/api/webhooks/1073624482016661594/PVux-OlHfHgFwTS4XAkZS7OkRqCSLjAaYxKI0XPs4s3IHXtJ5Wubkn2bBulHU0ba9AB0
