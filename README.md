@@ -1,6 +1,6 @@
 # PHP Discord Webhook
 ![php workflow](https://github.com/muriloperosa/discord-webhook/actions/workflows/php.yml/badge.svg)
-
+[![Latest Stable Version](http://poser.pugx.org/php-channels/discord-webhook/v)](https://packagist.org/packages/php-channels/discord-webhook) [![Total Downloads](http://poser.pugx.org/php-channels/discord-webhook/downloads)](https://packagist.org/packages/php-channels/discord-webhook) [![License](http://poser.pugx.org/php-channels/discord-webhook/license)](https://packagist.org/packages/php-channels/discord-webhook) [![PHP Version Require](http://poser.pugx.org/php-channels/discord-webhook/require/php)](https://packagist.org/packages/php-channels/discord-webhook)
 <br/>
 
 PHP package that contains a set of methods for simple, direct and elegant communication with Discord channels via Webhooks.
