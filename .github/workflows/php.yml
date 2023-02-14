@@ -38,16 +38,20 @@ jobs:
     - name: Run static analysis
       run: composer run-script phpstan
       
-    - name: webhook.sh
-      uses: johannes-huther/webhook.sh@v1.0.0
+    - name: Webhook Notifier
+      # You may pin to the exact commit or the version.
+      # uses: Netail/webhook-notifier@17c60982cde75f9f72c2a3e6c3c186cc6925f4f7
+      uses: Netail/webhook-notifier@v1.0.0
       with:
-        # The HTTP URI of the webhook endpoint to invoke
-        webhook_url: "https://discord.com/api/webhooks/1073624482016661594/PVux-OlHfHgFwTS4XAkZS7OkRqCSLjAaYxKI0XPs4s3IHXtJ5Wubkn2bBulHU0ba9AB0"
-        # json | form-urlencoded | json-extended
-        webhook_type: json
-        # Optional, set to true to disable output and therefore IP leaking
-        silent: true
-        # Optional, set to false to disable verification of SSL certificates
-        verify_ssl: true
-        # Optional additional data to include in the payload
-        data: '{"content":"Test bot message from gitaction."}'
+        # Discord Webhook URL
+        discord-url: "https://discord.com/api/webhooks/1073624482016661594/PVux-OlHfHgFwTS4XAkZS7OkRqCSLjAaYxKI0XPs4s3IHXtJ5Wubkn2bBulHU0ba9AB0"
+        # Color of the message in hexadecimal or title of predefined
+        color: 'success'
+        # Text at the top of the message
+        title: 'Success!'
+        # Text to be displayed under the title
+        text: 'Github Action!'
+        # Extra info to be displayed under the message
+        # fields: # optional
+        # Additional buttons under the message
+        # buttons: # optional
