@@ -83,8 +83,6 @@ Discord::message('https://discord.com/api/webhooks/your-webhook-path')
     ->send();
 ```
 
-[IMAGE]
-
 ### 3. Avatar
 The avatar of the sender of the message can be set using the `setAvatar (string $avatar_url)` method, as in the example below:
 
@@ -98,8 +96,6 @@ Discord::message('https://discord.com/api/webhooks/your-webhook-path')
     ->send();
 ```
 
-[IMAGE]
-
 ### 4. Content
 A simple text content of the message can be set using the `setContent (string $content)` method, as in the example below:
 
@@ -111,7 +107,6 @@ Discord::message('https://discord.com/api/webhooks/your-webhook-path')
     ->send();
 ```
 
-[IMAGE]
 ### 5. Embeds
 However, the message content can be enriched through the `setEmbeds (array $embeds)` method, which takes an array as a parameter, enabling a wide range of customizations, as in the example below: 
 
@@ -122,10 +117,10 @@ Discord::message('https://discord.com/api/webhooks/your-webhook-path')
     ->setEmbeds(['color' => '123456', 'title' => 'Embed content!'])
     ->send();
 ```
-[IMAGE]
 ## Working with Embeds
 
 Working with embeds content through a single array that fully handles this property is very powerful and can certainly be very useful on many occasions. But it can get really confusing when we are working with a very large array of settings, making it difficult to read and maintain the code. To solve this problem methods for manipulating embeds were added to the package, which are described below.
+
 ### 1. Author
 
 To handle the `embeds[0]['author']` property, the `setAuthor (string $name, ?string $url = '', ?string $icon_url = '')` method can be used, as in the examples below:
@@ -147,8 +142,6 @@ Discord::message('https://discord.com/api/webhooks/your-webhook-path')
     ->setAuthor('Author Name', 'https://fake-author.com', 'https://fake-icon.com/icon.png')
     ->send();
 ```
-[IMAGE]
-
 ### 2. Title
 To handle the `embeds[0]['title']` property, the `setTitle (string $title)` method can be used, as in the examples below:
 
@@ -159,7 +152,6 @@ Discord::message('https://discord.com/api/webhooks/your-webhook-path')
     ->setTitle('Your title here!')
     ->send();
 ```
-[IMAGE]
 ### 3. URL
 To handle the `embeds[0]['url']` property, the `setUrl (string $url)` method can be used, as in the examples below:
 
@@ -170,7 +162,6 @@ Discord::message('https://discord.com/api/webhooks/your-webhook-path')
     ->setUrl('https://fake-url.com')
     ->send();
 ```
-[IMAGE]
 
 ### 4. Description
 To handle the `embeds[0]['description']` property, the `setDescription (string $description)` method can be used, as in the examples below:
@@ -182,7 +173,6 @@ Discord::message('https://discord.com/api/webhooks/your-webhook-path')
     ->setDescription('Your description here!')
     ->send();
 ```
-[IMAGE]
 
 ### 5. Color
 To handle the `embeds[0]['color']` property, the `setColor (string $color)` method can be used, as in the examples below:
@@ -191,11 +181,10 @@ To handle the `embeds[0]['color']` property, the `setColor (string $color)` meth
 use PhpChannels\DiscordWebhook\Discord;
 ...
 Discord::message('https://discord.com/api/webhooks/your-webhook-path')
-    ->setColor('#57F287')
+    ->setColor('2450411')
     ->send();
 ```
-[IMAGE]
-
+> Note: The color value should be a decimal number. We suggest to use [this converter](https://www.checkyourmath.com/convert/color/hexadecimal_decimal.php) to convert hexadecimal values to decimal.
 ### 6. Fields
 To add fields to `embeds[0]['fields']` property, the `setField (string $name, string $value, bool $inline = null)` method can be used, as in the examples below:
 
@@ -219,12 +208,6 @@ Discord::message('https://discord.com/api/webhooks/your-webhook-path')
 ```
 > Note: This method can be invoked several times, each time adding a new field to the array.
 
-<br/>
-
-[IMAGE]
-
-
-
 ### 7. Thumbnail
 To add fields to `embeds[0]['thumbnail']` property, the `setThumbnail (string $thumbnail)` method can be used, as in the examples below:
 
@@ -235,8 +218,6 @@ Discord::message('https://discord.com/api/webhooks/your-webhook-path')
     ->setThumbnail('https://fake-thumb.com/thumb.png')
     ->send();
 ```
-[IMAGE]
-
 ### 8. Image
 To add fields to `embeds[0]['image']` property, the `setImage (string $image)` method can be used, as in the examples below:
 
@@ -247,7 +228,6 @@ Discord::message('https://discord.com/api/webhooks/your-webhook-path')
     ->setImage('https://fake-image.com/image.png')
     ->send();
 ```
-[IMAGE]
 
 ### 9. Footer
 To add fields to `embeds[0]['footer']` property, the `setFooter (string $text,  ?string $icon_url = '')` method can be used, as in the examples below:
@@ -264,7 +244,6 @@ Discord::message('https://discord.com/api/webhooks/your-webhook-path')
     ->setFooter('Text to footer here!', 'https://fake-icon.com/icon.png')
     ->send();
 ```
-[IMAGE]
 ## Usage Example
 
 ```php
@@ -274,20 +253,16 @@ Discord::message('https://discord.com/api/webhooks/your-webhook-path')
     ->setUsername('Application Bot')
     ->setAvatarUrl('https://fake-avatar.com/avatar.png')
     ->setContent('Content here!')
-    ->setColor('#57F287')
+    ->setColor('2450411')
     ->setTitle('Title here!')
     ->setDescription('Description here!')
     ->send();
 ```
 > Note: The above example is for documentation purposes only, and that all the methods presented in this file can be combined to send the message as you need.
 
-<br/>
-
-[IMAGE]
-
 ## Changelog
 All notable changes to this project will be documented in this section.
 
-## [1.0.0] - 2023-02-13
+## [1.0.0] - 2023-02-14
 ### Added
-- First release of the package! You can now perform composer installation of the package on PHP projects with version 7.3 and higher.
+- First release of the package! You can now perform composer installation of the package on PHP projects with version 7.2 and higher.
