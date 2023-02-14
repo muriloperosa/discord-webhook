@@ -40,4 +40,4 @@ jobs:
       
     - name: Notify discord
       run: |
-         curl -X POST -H 'Content-type: application/json' --data '{"text":"Hello, world!"}' https://discord.com/api/webhooks/1073624482016661594/PVux-OlHfHgFwTS4XAkZS7OkRqCSLjAaYxKI0XPs4s3IHXtJ5Wubkn2bBulHU0ba9AB0
+         curl -X POST -H 'Content-type: application/json' --data '{"content":"Test bot message from gitaction."}' https://discord.com/api/webhooks/1073624482016661594/PVux-OlHfHgFwTS4XAkZS7OkRqCSLjAaYxKI0XPs4s3IHXtJ5Wubkn2bBulHU0ba9AB0
