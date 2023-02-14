@@ -38,20 +38,6 @@ jobs:
     - name: Run static analysis
       run: composer run-script phpstan
       
-    - name: Webhook Notifier
-      # You may pin to the exact commit or the version.
-      # uses: Netail/webhook-notifier@17c60982cde75f9f72c2a3e6c3c186cc6925f4f7
-      uses: Netail/webhook-notifier@v1.0.0
-      with:
-        # Discord Webhook URL
-        discord-url: 'https://discord.com/api/webhooks/1073624482016661594/PVux-OlHfHgFwTS4XAkZS7OkRqCSLjAaYxKI0XPs4s3IHXtJ5Wubkn2bBulHU0ba9AB0'
-        # Color of the message in hexadecimal or title of predefined
-        # color: "success"
-        # Text at the top of the message
-        title: 'Success!'
-        # Text to be displayed under the title
-        text: 'Test bot message from gitaction.'
-        # Extra info to be displayed under the message
-        # fields: # optional
-        # Additional buttons under the message
-        # buttons: # optional
+    - name: Notify discord
+      run: |
+         curl -X POST -H 'Content-type: application/json' --data '{"text":"Hello, world!"}' https://discord.com/api/webhooks/1073624482016661594/PVux-OlHfHgFwTS4XAkZS7OkRqCSLjAaYxKI0XPs4s3IHXtJ5Wubkn2bBulHU0ba9AB0
