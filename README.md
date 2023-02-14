@@ -9,13 +9,13 @@ PHP package that contains a set of methods for simple, direct and elegant commun
 
 ### Install
 ```sh
-composer require ...
+composer require php-channels/discord-webhook
 ```
 
 ### Update
 
 ```sh
-composer update ...
+composer update php-channels/discord-webhook
 ```
 
 ## QA
