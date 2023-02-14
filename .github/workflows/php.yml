@@ -44,13 +44,13 @@ jobs:
       uses: Netail/webhook-notifier@v1.0.0
       with:
         # Discord Webhook URL
-        discord-url: "https://discord.com/api/webhooks/1073624482016661594/PVux-OlHfHgFwTS4XAkZS7OkRqCSLjAaYxKI0XPs4s3IHXtJ5Wubkn2bBulHU0ba9AB0"
+        discord-url: 'https://discord.com/api/webhooks/1073624482016661594/PVux-OlHfHgFwTS4XAkZS7OkRqCSLjAaYxKI0XPs4s3IHXtJ5Wubkn2bBulHU0ba9AB0'
         # Color of the message in hexadecimal or title of predefined
-        color: "success"
+        # color: "success"
         # Text at the top of the message
-        title: "Success!"
+        title: 'Success!'
         # Text to be displayed under the title
-        text: '{"content":"Test bot message from gitaction."}'
+        text: 'Test bot message from gitaction.'
         # Extra info to be displayed under the message
         # fields: # optional
         # Additional buttons under the message
