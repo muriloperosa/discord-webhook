@@ -40,4 +40,4 @@ jobs:
       
     - name: Notify discord
       run: |
-         curl -X POST -H 'Content-type: application/json' --data '{"username":"Github Action","avatar_url":"https://avatars.githubusercontent.com/u/54465427?v=4","content":":pepnoted: :pepeiswatching: Repository updated! :pepeiswatching: :thanks_pepe: ","embeds":[{"fields":[{"name":"Discord Webhook","value":"[https://github.com/muriloperosa/discord-webhook](https://github.com/muriloperosa/discord-webhook)","inline":true}],"color":"2450411"}]}' https://discord.com/api/webhooks/1073624482016661594/PVux-OlHfHgFwTS4XAkZS7OkRqCSLjAaYxKI0XPs4s3IHXtJ5Wubkn2bBulHU0ba9AB0
+         curl -X POST -H 'Content-type: application/json' --data '{"username":"Github Action","avatar_url":"https://avatars.githubusercontent.com/u/54465427?v=4","content":"Repository updated! 🏁","embeds":[{"fields":[{"name":"Discord Webhook","value":"[https://github.com/muriloperosa/discord-webhook](https://github.com/muriloperosa/discord-webhook)","inline":true}],"color":"2450411"}]}' https://discord.com/api/webhooks/1073624482016661594/PVux-OlHfHgFwTS4XAkZS7OkRqCSLjAaYxKI0XPs4s3IHXtJ5Wubkn2bBulHU0ba9AB0
