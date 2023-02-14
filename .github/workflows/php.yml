@@ -42,7 +42,7 @@ jobs:
       uses: johannes-huther/webhook.sh@v1.0.0
       with:
         # The HTTP URI of the webhook endpoint to invoke
-        webhook_url: 'https://discord.com/api/webhooks/1073624482016661594/PVux-OlHfHgFwTS4XAkZS7OkRqCSLjAaYxKI0XPs4s3IHXtJ5Wubkn2bBulHU0ba9AB0'
+        webhook_url: "https://discord.com/api/webhooks/1073624482016661594/PVux-OlHfHgFwTS4XAkZS7OkRqCSLjAaYxKI0XPs4s3IHXtJ5Wubkn2bBulHU0ba9AB0"
         # json | form-urlencoded | json-extended
         webhook_type: json
         # Optional, set to true to disable output and therefore IP leaking
