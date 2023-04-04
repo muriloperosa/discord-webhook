@@ -265,7 +265,7 @@ All notable changes to this project will be documented in this section.
 
 ## [1.0.1] - 2023-04-04
 ### Changed
-- Change min version of `guzzlehttp/guzzle` to `^6.3`.
+- Changed min version of `guzzlehttp/guzzle` to `^6.3`.
 
 ## [1.0.0] - 2023-02-14
 ### Added
