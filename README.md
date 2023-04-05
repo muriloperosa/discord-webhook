@@ -185,6 +185,17 @@ Discord::message('https://discord.com/api/webhooks/your-webhook-path')
     ->send();
 ```
 > Note: The color value should be a decimal number. We suggest to use [this converter](https://www.checkyourmath.com/convert/color/hexadecimal_decimal.php) to convert hexadecimal values to decimal.
+
+Or you can use `setColor` method passing a string `reference color`, as in the example below:
+```php
+use PhpChannels\DiscordWebhook\Discord;
+...
+Discord::message('https://discord.com/api/webhooks/your-webhook-path')
+    ->setColor('info')
+    ->send();
+```
+> The possible color references are: `'info', 'error', 'notice', 'warning', 'success'`.
+
 ### 6. Fields
 To add fields to `embeds[0]['fields']` property, the `setField (string $name, string $value, bool $inline = null)` method can be used, as in the examples below:
 
