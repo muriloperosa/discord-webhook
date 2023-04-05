@@ -270,14 +270,3 @@ Discord::message('https://discord.com/api/webhooks/your-webhook-path')
     ->send();
 ```
 > Note: The above example is for documentation purposes only, and that all the methods presented in this file can be combined to send the message as you need.
-
-## Changelog
-All notable changes to this project will be documented in this section.
-
-## [1.0.1] - 2023-04-04
-### Changed
-- Changed min version of `guzzlehttp/guzzle` to `^6.3`.
-
-## [1.0.0] - 2023-02-14
-### Added
-- First release of the package! You can now perform composer installation of the package on PHP projects with version 7.2 and higher.
