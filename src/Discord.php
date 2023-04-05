@@ -207,16 +207,38 @@ class Discord
         return $this;
     }
 
-    /**
+     /**
      * Sets color on embends to payload.
      *
      * @param string $color
      * @return self
+     * 
+     * @example setColor('info') Helper coloors: 'info', 'error', 'notice', 'warning', 'success'
+     * @example setColor('2450411') Any decimal namber color
      */
     public function setColor (string $color): self
     {
-        $this->embeds[0]['color'] = $color;
+        $this->embeds[0]['color'] = $this->getColor($color);
         return $this;
+    }
+
+    /**
+     * Get color
+     *
+     * @param string $color
+     * @return string
+     */
+    public function getColor (string $color): string
+    {
+        $colors = [
+            'info'    => Color::LOGGER_INFO,
+            'error'   => Color::LOGGER_ERROR,
+            'notice'  => Color::LOGGER_NOTICE,
+            'warning' => Color::LOGGER_WARNING,
+            'success' => Color::LOGERR_SUCCESS
+        ];
+
+        return in_array($color, $colors) ? (string) $colors[$color] : $color;
     }
 
     /**
