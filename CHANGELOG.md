@@ -9,7 +9,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0), 
 - Fixed bug if send embeds with only `color` key
 
 ### Changed
-- Changed min version of `guzzlehttp/guzzle` to `>=6.3`.
+- Changed min version of `guzzlehttp/guzzle` to `^6.3 || ^7.0`.
 
 ## [1.0.2] - 2023-04-05
 ### Added
