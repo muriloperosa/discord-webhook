@@ -238,7 +238,7 @@ class Discord
             'success' => Color::LOGERR_SUCCESS
         ];
 
-        return in_array($color, $colors) ? (string) $colors[$color] : $color;
+        return array_key_exists($color, $colors) ? (string) $colors[$color] : $color;
     }
 
     /**
