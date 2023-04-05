@@ -93,8 +93,13 @@ class Discord
         if (!empty($this->embeds))
         {
             $json['embeds'] = $this->embeds;
-        }
 
+            // fix bug if send embeds with only "color" key
+            if(count($this->embeds) === 1 && array_key_first($this->embeds[0]) == 'color')
+            {
+                unset($json['embeds']);
+            }
+        }
 
         $response = $this->client->post($this->webhook, ['json' => $json]);  
 
