@@ -250,17 +250,17 @@ class Discord
      * Adds new fields on embends to payload.
      *
      * @param string $name
-     * @param string $value
+     * @param mixed $value
      * @param boolean|null $inline
      * @return self
      */
-    public function setField (string $name, string $value, bool $inline = null): self
+    public function setField (string $name, $value, bool $inline = null): self
     {
         $fields = isset($this->embeds[0]['fields']) ? $this->embeds[0]['fields'] : [];
 
         $field = [
             'name'   => $name, 
-            'value'  => $value,
+            'value'  => $this->normalizeValue($value),
             'inline' => $inline
         ];
 
