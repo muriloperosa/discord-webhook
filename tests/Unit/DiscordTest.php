@@ -258,4 +258,36 @@ class DiscordTest extends TestCase
         $this->expectException(Exception::class);
         Discord::message('https://fake-webhook.test.com')->send();
     }
+
+    /**
+     * Test Discord normalizeValue() method.
+     * 
+     * @dataProvider provideValues
+     *
+     * @param mixed $input
+     * @param string $expected_output
+     * @return void
+     */ 
+    public function testNormalizeValue($input, string $expected_output)
+    {
+        $message = Discord::message();
+        $this->assertEquals($expected_output, $message->normalizeValue($input));
+    }
+
+    /**
+     * Provide expected/actual values to tests
+     *
+     * @return array
+     */
+    public function provideValues() : array
+    {
+        return [
+            [null, 'null'],
+            [42, '42'],
+            ['foo', 'foo'],
+            [['a', 'b'], '["a","b"]'],
+            [[], '[]'],
+            [new \stdClass(), '{}']
+        ];
+    }
 }
