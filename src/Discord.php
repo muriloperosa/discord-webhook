@@ -322,4 +322,17 @@ class Discord
         $this->webhook = $webhook;
         return $this;
     }
+
+    /**
+     * Normalize any values to string
+     *
+     * @param mixed $val
+     * @return string
+     */
+    public function normalizeValue($val = ''): string
+    {
+        if(is_null($val)) return 'null';
+
+        return strval(is_array($val) || is_object($val) ? json_encode($val) : $val);
+    }
 }
