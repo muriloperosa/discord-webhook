@@ -8,6 +8,11 @@ use GuzzleHttp\Client;
 class Discord 
 {
     /**
+     * @const int - max allowed size for the field message
+     */
+    const FIELD_MAX_SIZE = 1024;
+
+    /**
      * @var \GuzzleHttp\Client
      */
     protected $client;
@@ -257,10 +262,23 @@ class Discord
     public function setField (string $name, $value, bool $inline = null): self
     {
         $fields = isset($this->embeds[0]['fields']) ? $this->embeds[0]['fields'] : [];
+        $value  = $this->normalizeValue($value);
+
+        if(strlen($value) > self::FIELD_MAX_SIZE)
+        {
+            $chunks = str_split($value, self::FIELD_MAX_SIZE);
+
+            foreach ($chunks as $key => $chunk)
+            {
+                $this->setField("$name(part-$key)", $chunk, false);
+            }
+
+            return $this;
+        }
 
         $field = [
             'name'   => $name, 
-            'value'  => $this->normalizeValue($value),
+            'value'  => $value,
             'inline' => $inline
         ];
 
