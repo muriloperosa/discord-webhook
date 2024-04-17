@@ -100,7 +100,7 @@ class Discord
             $json['embeds'] = $this->embeds;
 
             // fix bug if send embeds with only "color" key
-            if(count($this->embeds) === 1 && array_key_first($this->embeds[0]) == 'color')
+            if(count($this->embeds) === 1  && count(array_keys($this->embeds[0])) === 1 && array_key_first($this->embeds[0]) == 'color')
             {
                 unset($json['embeds']);
             }
