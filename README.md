@@ -270,3 +270,4 @@ Discord::message('https://discord.com/api/webhooks/your-webhook-path')
     ->send();
 ```
 > Note: The above example is for documentation purposes only, and that all the methods presented in this file can be combined to send the message as you need.
+
